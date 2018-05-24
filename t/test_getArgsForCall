@@ -76,7 +76,7 @@ testShouldQuoteArgsCorrectly() {
     local output tab_inside expected_output
 
     tab_inside=$(printf "%s\\t%s" "tab" "inside")
-    expected_output=$(printf '"foo bar" abc def "baz bat" "%s"' "$tab_inside")
+    expected_output=$(printf "\"foo bar\" abc def \"baz bat\" \"%s\"" "$tab_inside")
 
     createSpy some_spy || fail 'createSpy some_spy'
 
